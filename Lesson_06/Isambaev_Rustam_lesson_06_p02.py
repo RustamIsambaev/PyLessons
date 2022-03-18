@@ -8,11 +8,9 @@
 # проверить работу метода.
 # Например: 20 м*5000 м*25 кг*5 см = 12500 т.
 class Road:
-    _length = 0
-    _width = 0
 
-    def __init__(self, road_lenght: int, road_width: int):
-        self._length = road_lenght
+    def __init__(self, road_length: int, road_width: int):
+        self._length = road_length
         self._width = road_width
 
     def asphalt_mass_count(self, asphalt_mass_pr_meter, road_height):
@@ -20,4 +18,5 @@ class Road:
 
 
 myroad = Road(5000, 20)
+
 print(int(myroad.asphalt_mass_count(25, 5) / 1000))
